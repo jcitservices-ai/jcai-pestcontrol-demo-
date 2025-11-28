@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JC ai Demo – Pest Control Services</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      background: url('https://www.transparenttextures.com/patterns/pw-maze-white.png') repeat;
+      color: #333;
+      scroll-behavior: smooth;
+    }
+
+    /* ---------------- HERO ---------------- */
+    .hero {
+      background: linear-gradient(to right, #2ecc71, #b8f2d3);
+      padding: 80px 20px;
+      color: #fff;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.2);
+    }
+
+    .hero-content {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+
+    .hero-text {
+      max-width: 520px;
+      text-align: left;
+    }
+
+    .hero-text h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+
+    .hero-text p {
+      font-size: 1.4rem;
+      margin-top: 0;
+    }
+
+    .hero-buttons {
+      margin-top: 20px;
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .hero-btn {
+      background-color: #27ae60;
+      color: #fff;
+      padding: 12px 22px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.25s;
+    }
+
+    .hero-btn:hover {
+      background-color: #1e8c4d;
+      transform: scale(1.05);
+    }
+
+    /* ---------------- AVATAR ---------------- */
+    @keyframes float {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+      100% { transform: translateY(0); }
+    }
+
+    @keyframes glowPulse {
+      0% { box-shadow: 0 0 25px 6px rgba(39,174,96,0.6); }
+      50% { box-shadow: 0 0 40px 10px rgba(39,174,96,0.9); }
+      100% { box-shadow: 0 0 25px 6px rgba(39,174,96,0.6); }
+    }
+
+    .hero-avatar img {
+      width: 190px;
+      height: 190px;
+      border-radius: 50%;
+      border: 4px solid #fff;
+      animation: float 3s ease-in-out infinite,
+                 glowPulse 3.5s ease-in-out infinite;
+    }
+
+    /* ---------------- CONTENT ---------------- */
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 50px 20px;
+      text-align: center;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 16px;
+      padding: 30px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+      text-align: left;
+      margin-top: 30px;
+    }
+
+    .section-banner {
+      background: #27ae60;
+      color: #fff;
+      padding: 14px 22px;
+      font-size: 1.4rem;
+      border-radius: 10px;
+      display: inline-block;
+      margin: 40px 0 25px;
+    }
+
+    /* ---------------- PRICING ---------------- */
+    .ai-pricing-table {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+
+    .ai-pricing-card {
+      width: 260px;
+      padding: 24px;
+      border-radius: 16px;
+      color: #fff;
+      text-align: center;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+      transition: 0.3s;
+    }
+
+    .ai-pricing-card:hover {
+      transform: translateY(-8px);
+    }
+
+    .starter { background: #6abf8a; }
+    .growth { background: #27ae60; }
+    .pro { background: #1e8449; }
+
+    .simulate-chat-btn {
+      margin-top: 15px;
+      background: #eafff3;
+      color: #27ae60;
+      border: none;
+      padding: 10px 18px;
+      border-radius: 25px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .simulate-chat-btn:hover {
+      transform: scale(1.08);
+    }
+
+    /* ---------------- TABLE ---------------- */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 40px 0;
+    }
+
+    th, td {
+      border: 1px solid #ddd;
+      padding: 15px;
+      text-align: center;
+    }
+
+    th {
+      background: #dff7eb;
+      color: #27ae60;
+    }
+
+    /* ---------------- FOOTER ---------------- */
+    .contact {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+      margin-top: 30px;
+    }
+
+    footer {
+      margin: 60px 0 40px;
+      text-align: center;
+      color: #666;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 800px) {
+      .hero-text { text-align: center; }
+      .hero-buttons { justify-content: center; }
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-content">
+    <div class="hero-text">
+      <h1>JC ai Pest Control Demo</h1>
+      <p>24/7 AI Assistant for Pest Control Businesses</p>
+
+      <div class="hero-buttons">
+        <a href="mailto:jayconcha9@gmail.com" class="hero-btn">📧 Email Us</a>
+        <a href="tel:09165257683" class="hero-btn">📞 Call Us</a>
+      </div>
+    </div>
+
+    <div class="hero-avatar">
+      <img src="assets/avatarjun.png" alt="Jun – Pest Control AI Agent" />
+    </div>
+  </div>
+</div>
+
+<div class="container">
+
+  <div class="card">
+    <p>
+      Meet <strong>Jun</strong>, your ai pest control assistant.  
+      He handles service inquiries, schedules treatments, provides pricing estimates,
+      and simulates customer callbacks.  
+      <strong>This is a demo environment.</strong>
+    </p>
+    <p>⚠️ No real service bookings are created.</p>
+  </div>
+
+  <div class="section-banner">🪲 AI Agent Pricing</div>
+
+  <div class="ai-pricing-table">
+    <div class="ai-pricing-card starter">
+      <h3>✨ Starter</h3>
+      <p>₱3,000 / month</p>
+      <p>Basic inquiries</p>
+      <p>24/7 support</p>
+      <button class="simulate-chat-btn" onclick="simulateChat()">💬 Simulate Chat</button>
+    </div>
+
+    <div class="ai-pricing-card growth">
+      <h3>🌟 Growth</h3>
+      <p>₱5,000 / month</p>
+      <p>Scheduling + inquiries</p>
+      <p>Unlimited chats</p>
+      <button class="simulate-chat-btn" onclick="simulateChat()">💬 Simulate Chat</button>
+    </div>
+
+    <div class="ai-pricing-card pro">
+      <h3>💎 Pro</h3>
+      <p>₱8,000 / month</p>
+      <p>Callbacks + bookings</p>
+      <p>Full automation</p>
+      <button class="simulate-chat-btn" onclick="simulateChat()">💬 Simulate Chat</button>
+    </div>
+  </div>
+
+  <div class="section-banner">🤖 AI vs Live Agent</div>
+
+  <table>
+    <tr><th>Feature</th><th>ai Agent</th><th>Live Agent</th></tr>
+    <tr><td>Availability</td><td>24/7 ✅</td><td>Limited ⏰</td></tr>
+    <tr><td>Cost</td><td>Fixed 💰</td><td>Salary 💸</td></tr>
+    <tr><td>Concurrent Chats</td><td>Unlimited 🚀</td><td>1 at a time</td></tr>
+    <tr><td>Scalability</td><td>Instant</td><td>Slow</td></tr>
+  </table>
+
+  <div class="contact">
+    <a href="mailto:jayconcha9@gmail.com" class="hero-btn">📧 Email Us</a>
+    <a href="tel:09165257683" class="hero-btn">📞 Call Us</a>
+  </div>
+
+</div>
+
+<footer>
+  © 2025 JCIT Services · Pest Control AI Demo
+</footer>
+
+<!-- RETELL AI WIDGET -->
+<script
+  id="retell-widget"
+  src="https://dashboard.retellai.com/retell-widget.js"
+  type="module"
+  data-public-key="public_key_0b7796c09905009f2051b"
+  data-agent-id="agent_e282308196d235afb8859289b4"
+  data-agent-version="v1demo"
+  data-title="JC ai Pest Control Demo"
+  data-bot-name="Jun"
+  data-color="#27ae60"
+  data-popup-message="Hi! 👋 I’m Jun, your pest control ai assistant. This is a demo—pero I can show you how bookings and inquiries work."
+  data-show-ai-popup="true"
+  data-show-ai-popup-time="1"
+  data-auto-open="true"
+></script>
+
+<script>
+  function simulateChat() {
+    if (window.retellWidget) {
+      window.retellWidget.open();
+    }
+  }
+</script>
+
+</body>
+</html>
